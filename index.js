@@ -1,25 +1,23 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-  //hasTargetSum([3, 8, 12, 4, 11, 7], 10))
-  //iterate over each number in the array
+ //n step
   for(let i = 0; i < array.length; i++){
-    //for the current number identify a compliment that adds up to the target (comp = target - num)
+    
     const compliment = target - array[i];
-    //iterate over the rest of the array
     for(let j = i + 1; j < array.length; j++){
-     //check if any number is our compliment
-     //if so return true
+    //n * n step
      if(array[j] === compliment)
       return true;
      
     } 
-     //if i reach end return false
+     
      return false
   }
 }
 
 /* 
   Write the Big O time complexity of your function here
+  Runtime: 0(n^2)
+  Space: 0(n)
 */
 
 /* 
